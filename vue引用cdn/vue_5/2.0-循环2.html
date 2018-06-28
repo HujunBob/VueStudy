@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue 学习</title>
+    <style>
+
+    </style>
+    <script src="vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{
+                    list:['width','height','border']
+                },
+                methods:{
+                    add(){
+                        this.list.push('orange');
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="button" value="添加" @click="add">
+    <ul>
+        <li v-for="(val,index) in list">
+            {{val}} {{index}}
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

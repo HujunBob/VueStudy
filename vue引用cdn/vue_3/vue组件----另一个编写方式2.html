@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>111</title>
+	<meta charset="utf-8">
+	<script src="js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="box">
+		<my-aaa></my-aaa>
+	</div>
+
+	<script>
+	
+		new Vue({
+			el: '#box',
+			components:{
+				'my-aaa':{
+					data(){
+						return {
+							msg:'welcome vue' 
+						}
+					},
+					methods:{
+						change(){
+							this.msg='changed'; 
+						}
+					},
+					template:'<h1 @click="change">号--->{{msg}}</h1>'
+				}
+			}
+		});
+	</script>
+</body>
+</html> 

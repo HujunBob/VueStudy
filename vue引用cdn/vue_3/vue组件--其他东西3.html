@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>111</title>
+	<meta charset="utf-8">
+	<script src="js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="box">
+		<aaa></aaa>
+	</div>
+
+	<script>
+	   var Aaa=Vue.extend({
+	   		data(){
+	   			return {
+	   				msg:'我是标题胡俊'
+	   			};
+	   		},
+	   		methods:{
+	   			change:function(){
+	   				this.msg='changed';
+	   			}
+	   		},
+	   		template:'<h3 @click="change">{{msg}}</h3>'
+	   });
+	   Vue.component('aaa',Aaa);
+
+		new Vue({
+			el: '#box',
+			data:{
+				bSign:true
+			}
+		});
+	</script>
+</body>
+</html> 
